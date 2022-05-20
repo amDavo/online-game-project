@@ -78,3 +78,6 @@ return { emptyObj,emptyArr}
 
   const {emptyArr,emptyObj} = parsTable(data)
   console.log(emptyArr,emptyObj);
+ 
+
+  
