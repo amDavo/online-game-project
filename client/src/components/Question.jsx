@@ -20,7 +20,6 @@ const Question = ({children}) => {
 
     }
 
-    console.log(inputText)
 
     return (
         <>
