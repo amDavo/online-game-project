@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {getQuestions} from "../redux/cardActions";
 import Question from "./Question";
 
+
 function parsTable(data) {
     if (data.length > 0) {
         data = data?.map(el => {

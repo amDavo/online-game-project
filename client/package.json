@@ -17,6 +17,7 @@
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.1",
     "thunk": "^0.0.1",
+    "use-sound": "^4.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
