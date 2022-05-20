@@ -11,3 +11,4 @@ export const getQuestions = (dispatch) => {
         dispatch(setCards(res.data))
     })
 }
+
