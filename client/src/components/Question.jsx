@@ -1,23 +1,23 @@
 import React, {useState} from 'react';
 import {Button, Form, Modal} from "react-bootstrap";
-import {useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
+import {addScore} from "../redux/scoreAction";
 
 
-const Question = ({children}) => {
+const Question = ({children, question, category, answer}) => {
 
-    const cards = useSelector(state => state.cards)
-
-    // const cardShort = cards.slice(0, 10)
-    // console.log(cards)
-
-    const [show, setShow] = useState(true);
+    const [show, setShow] = useState(false);
     const [inputText, setInputText] = useState('');
-
+    const dispatch = useDispatch()
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const handleCheck = () => {
-
+        if (inputText === answer) {
+            dispatch(addScore(children * 1))
+        }
+        //
+        handleClose()
     }
 
 
@@ -30,9 +30,10 @@ const Question = ({children}) => {
                 <Modal.Header closeButton>
                 </Modal.Header>
                 <Modal.Body>
-                    <Modal.Title>Modal title</Modal.Title>
+                    <Modal.Title>{category}</Modal.Title>
                     <Modal.Body>
-                        <p>Modal body text goes here.</p>
+                        <p>{question}</p>
+                        <p>Value: {children}</p>
                     </Modal.Body>
                     <Form.Control
                         value={inputText}

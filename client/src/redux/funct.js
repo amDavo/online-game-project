@@ -58,12 +58,13 @@ const data = [
       }
   }]
 
+
   function parsTable (data){
     data = data.map(el=>{
       const obj = el;
       obj.category = el.category.title
       return  obj
-      
+
     })
     console.log(data)
     let emptyArr = []
@@ -81,3 +82,5 @@ const data = [
 return { emptyObj,emptyArr}
   }
 
+
+  

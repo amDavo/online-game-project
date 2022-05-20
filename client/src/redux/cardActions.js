@@ -6,9 +6,8 @@ export const setCards = (questions) => ({
     payload: questions
 })
 
-export const getQuestions = (dispatch) => {
+export const getQuestions = () => (dispatch) => {
     axios.get('https://jservice.io/api/clues').then(res => {
         dispatch(setCards(res.data))
     })
 }
-

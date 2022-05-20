@@ -1,3 +1,4 @@
-export const initState =()=>({
-  question:[]
+export const initState = () => ({
+    cards: [],
+    score: 0
 })
