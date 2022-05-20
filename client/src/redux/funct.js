@@ -58,9 +58,14 @@ const data = [
       }
   }]
 
-
   function parsTable (data){
-    data = data.map(el=>{return  el.category = el.category.title })
+    data = data.map(el=>{
+      const obj = el;
+      obj.category = el.category.title
+      return  obj
+      
+    })
+    console.log(data)
     let emptyArr = []
     let emptyObj = {}
     data.forEach(el=>{
@@ -76,8 +81,3 @@ const data = [
 return { emptyObj,emptyArr}
   }
 
-  const {emptyArr,emptyObj} = parsTable(data)
-  console.log(emptyArr,emptyObj);
- 
-
-  

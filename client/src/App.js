@@ -3,6 +3,7 @@ import {useEffect} from 'react';
 import './App.css';
 import {getQuestions} from "./redux/cardActions";
 import Question from "./components/Question";
+import Header from './components/Header';
 
 function App() {
     const dispatch = useDispatch()
@@ -16,6 +17,7 @@ function App() {
     return (
         <div className="App">
             hello world
+            <Header/>
             <Question/>
         </div>
     );
